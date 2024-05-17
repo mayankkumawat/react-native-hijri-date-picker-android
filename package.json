@@ -20,9 +20,9 @@
   "author": "Mayank Kumawat <mayankkumawat015@gmail.com",
   "license": "MIT",
     "bugs": {
-    "url": "https://github.com/mohamed-habib/react-native-hijri-date-picker-android/issues"
+    "url": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android"
   },
-"homepage": "https://github.com/mohamed-habib/react-native-hijri-date-picker-android#readme",
+"homepage": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android#readme",
   "peerDependencies": {
     "react-native": "^0.67.3"
   }
