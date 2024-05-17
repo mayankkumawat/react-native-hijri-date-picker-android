@@ -1,17 +1,11 @@
 
 # react-native-hijri-date-picker-android
-[![Codelab](http://www.codelabsys.com/images/logo.png)](http://www.codelabsys.com/) 
 
-
-#This Module version is experimental, if you found any issues, kindly submit. 
+#This Module version is originally forked from https://www.npmjs.com/package/react-native-hijri-date-picker-android
 
 ## Getting started
 ### Versions
-For React Native >= 0.47.0 use v2.+
-For React Native < 0.47.0 use v1.0.8
-
-### Installing
-   [![NPM](https://nodei.co/npm/react-native-hijri-date-picker-android.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-hijri-date-picker-android/)
+For React Native >= 0.67.x use v2.0.1
    
 `$ npm install react-native-hijri-date-picker-android --save`
 
@@ -20,22 +14,6 @@ For React Native < 0.47.0 use v1.0.8
 `$ react-native link react-native-hijri-date-picker-android`
 
 ### Manual installation
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.HijriDatePickerAndroidPackage;` to the imports at the top of the file
-  - Add `new HijriDatePickerAndroidPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-hijri-date-picker-android'
-  	project(':react-native-hijri-date-picker-android').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-hijri-date-picker-android/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-hijri-date-picker-android')
-  	```
-
 
 ## Usage
 ```javascript
@@ -70,11 +48,6 @@ import HijriDatePickerAndroid from "react-native-hijri-date-picker-android";
       console.warn("Hijri Date: " + day + "/" + month + 1 + "/" + year + "/");
 
 ```
-  
-## For IOS
- 
-Check out our IOS project [react-native-universal-datepicker-ios](https://github.com/Codelabsys/react-native-universal-datepicker-ios) 
-  
   
 ## Credits
 
