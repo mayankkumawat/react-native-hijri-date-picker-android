@@ -1,28 +1,28 @@
 {
-  "name": "react-native-hijri-date-picker-android",
+  "name": "react-native-hijri-calendar-picker-android",
   "version": "2.0.1",
   "description": "Date Dialog for Hijri calendar for android",
   "main": "index.android.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android"
-},
+  },
   "keywords": [
     "react-native",
-	"Hijri",
-	"UmmalquraCalendar",
-	"react-native-hijri-date-picker-android",
-	"HijriDatePickerAndroid"
+    "Hijri",
+    "UmmalquraCalendar",
+    "react-native-hijri-date-picker-android",
+    "HijriDatePickerAndroid"
   ],
   "author": "Mayank Kumawat <mayankkumawat015@gmail.com",
   "license": "MIT",
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android"
   },
-"homepage": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android#readme",
+  "homepage": "https://github.com/mayankkumawat/react-native-hijri-date-picker-android#readme",
   "peerDependencies": {
     "react-native": "^0.67.3"
   }
