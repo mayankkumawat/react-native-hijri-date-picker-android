@@ -1,7 +1,7 @@
 
 # react-native-hijri-date-picker-android
 
-# This Module version is originally forked from https://www.npmjs.com/package/react-native-hijri-date-picker-android
+## This Module version is originally forked from https://www.npmjs.com/package/react-native-hijri-date-picker-android
 
 ## Getting started
 ### Versions
