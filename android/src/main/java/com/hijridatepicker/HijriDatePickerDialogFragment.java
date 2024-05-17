@@ -6,8 +6,9 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +23,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
-
-import javax.annotation.Nullable;
 
 /**
  * Created by Mohamed Habib on 16/10/2016.
@@ -195,4 +194,3 @@ public class HijriDatePickerDialogFragment extends DialogFragment implements OnD
 
 
 }
-
