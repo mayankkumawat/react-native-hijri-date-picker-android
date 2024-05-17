@@ -4,8 +4,9 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +15,6 @@ import android.widget.Button;
 import com.github.eltohamy.materialhijricalendarview.CalendarDay;
 import com.github.eltohamy.materialhijricalendarview.MaterialHijriCalendarView;
 import com.github.eltohamy.materialhijricalendarview.OnDateSelectedListener;
-
-import javax.annotation.Nullable;
 
 import static com.hijridatepicker.HijriDatePickerDialogFragment.customizeHijriCalendarView;
 
@@ -98,4 +97,3 @@ public class SupportHijriDatePickerDialogFragment extends DialogFragment impleme
         mOnDismissListener = onDismissListener;
     }
 }
-
