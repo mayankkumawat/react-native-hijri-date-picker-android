@@ -3,12 +3,15 @@ package com.hijridatepicker;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.DialogFragment;
-import android.app.FragmentManager;
+
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.widget.DatePicker;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.DialogFragment;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -112,9 +115,9 @@ public class HijriDatePickerAndroidModule extends ReactContextBaseJavaModule {
             }
             // We want to support both android.app.Activity and the pre-Honeycomb FragmentActivity
             // (for apps that use it for legacy reasons). This unfortunately leads to some code duplication.
-            if (activity instanceof android.support.v4.app.FragmentActivity) {
-                android.support.v4.app.FragmentManager fragmentManager = ((android.support.v4.app.FragmentActivity) activity).getSupportFragmentManager();
-                android.support.v4.app.DialogFragment oldFragment = (android.support.v4.app.DialogFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
+            if (activity instanceof FragmentActivity) {
+                FragmentManager fragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
+                DialogFragment oldFragment = (DialogFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
                 if (oldFragment != null) {
                     oldFragment.dismiss();
                 }
@@ -131,7 +134,8 @@ public class HijriDatePickerAndroidModule extends ReactContextBaseJavaModule {
                 fragment.setOnExceptionListener(listener);
                 fragment.show(fragmentManager, FRAGMENT_TAG);
             } else {
-                FragmentManager fragmentManager = activity.getFragmentManager();
+                FragmentActivity fragmentActivity = (FragmentActivity) activity;
+                FragmentManager fragmentManager = fragmentActivity.getSupportFragmentManager();
                 DialogFragment oldFragment = (DialogFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
                 if (oldFragment != null) {
                     oldFragment.dismiss();
@@ -147,7 +151,7 @@ public class HijriDatePickerAndroidModule extends ReactContextBaseJavaModule {
                 fragment.setOnDismissListener(listener);
                 fragment.setOnDateSetListener(listener);
                 fragment.setOnExceptionListener(listener);
-                fragment.show(fragmentManager, FRAGMENT_TAG);
+                fragment.show(activity.getFragmentManager(), FRAGMENT_TAG);
             }
         } catch (Exception e) {
             promise.reject(ERROR_OPEN, "Exception happened while executing open method, details: " + e.getMessage());
